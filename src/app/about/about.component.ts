@@ -7,5 +7,5 @@ import { Component } from '@angular/core';
 })
 
 export class AboutComponent {
-
+  pageTitle = "About U.A. Academy"
 }
