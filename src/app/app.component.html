@@ -1,18 +1,78 @@
 <link href="https://fonts.googleapis.com/css?family=Bungee" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
-<nav class="navbar navbar-default">
+<!-- can't use npm for Bootstrap 4 -->
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+<nav class="navbar navbar-default" style="z-index: 9999">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="#">
+      <a class="navbar-brand" href="">
         <img alt="Brand" src="assets/images/bnhlogo.png" style="height: 70px">
       </a>
       <h1>U.A. Hero Academy</h1>
     </div>
   </div>
+  <div class="container">
+  <ul class="list-inline">
+    <li><a href="">Home</a></li>
+    <li><a href="/about">About</a></li>
+    <li><a href="/staff">Staff</a></li>
+  </ul>
+</div>
 </nav>
 <div class="main" style="margin-top: 200px">
-  <app-about></app-about>
-  <app-show></app-show>
+  <router-outlet></router-outlet>
 </div>
 
-<app-test></app-test>
+<!-- Footer -->
+<footer class="page-footer">
+
+    <!-- Footer Links -->
+    <div class="container-fluid text-center text-md-left">
+
+      <!-- Grid row -->
+      <div class="row">
+
+        <!-- Grid column -->
+        <div class="col-md-6 mt-md-0 mt-3">
+
+          <!-- Content -->
+          <h5 class="text-uppercase">U.A. High School</h5>
+          <p>Training the next generation of heroes.</p>
+
+        </div>
+        <!-- Grid column -->
+
+        <hr class="clearfix w-100 d-md-none pb-3">
+
+        <!-- Grid column -->
+        <div class="col-md-3 mb-md-0 mb-3">
+
+            <!-- Links -->
+            <h5 class="text-uppercase">Overview</h5>
+
+            <ul class="list-unstyled">
+              <li>
+                <a href="/about">About</a>
+              </li>
+              <li>
+                <a href="/staff">Staff</a>
+              </li>
+              <!-- <li>
+                <a href="#!">Link 3</a>
+              </li>
+              <li>
+                <a href="#!">Link 4</a>
+              </li> -->
+            </ul>
+
+          </div>
+          <!-- Grid column -->
+
+      </div>
+      <!-- Grid row -->
+
+    </div>
+    <!-- Footer Links -->
+
+  </footer>
+  <!-- Footer -->

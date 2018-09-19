@@ -26,3 +26,8 @@ nav {
    -1px 1px 0 #000,
    1px 1px 0 #000;
 }
+
+footer{
+  background-color: #af0b00;
+  font-family: 'Bungee',cursive;
+}
