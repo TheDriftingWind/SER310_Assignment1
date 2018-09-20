@@ -1,0 +1,33 @@
+<h1 style="text-align:center;" class="jumbotron">See our students in action!</h1>
+<div class="container" style="text-align:center;">
+  <ngb-carousel *ngIf="images">
+    <ng-template ngbSlide>
+      <img [src]="images[0]" alt="Midoriya">
+      <div class="carousel-caption">
+        <h3>Izuku Midoriya</h3>
+        <p>Punches a training robot to save a fellow student</p>
+      </div>
+    </ng-template>
+    <ng-template ngbSlide>
+      <img [src]="images[1]" alt="Bakugo">
+      <div class="carousel-caption">
+        <h3>Katsuki Bakugo</h3>
+        <p>Blasts villains in defience after being captured</p>
+      </div>
+    </ng-template>
+    <ng-template ngbSlide>
+      <img [src]="images[2]"  alt="Todoroki">
+      <div class="carousel-caption">
+        <h3>Shoto Todoroki</h3>
+        <p>Saving fellow students and a pro hero from Hero Killer Stain</p>
+      </div>
+    </ng-template>
+    <ng-template ngbSlide>
+      <img [src]="images[3]" alt="Iida">
+      <div class="carousel-caption">
+        <h3>Iida Tenya</h3>
+        <p>Using his signature Recipro Kick on Hero Killer Stain</p>
+      </div>
+    </ng-template>
+  </ngb-carousel>
+</div>

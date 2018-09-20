@@ -9,12 +9,15 @@ import { TestComponent } from './test/test.component';
 import { Routes, RouterModule } from '@angular/router';
 import { StaffComponent } from './staff/staff.component';
 import { HomeComponent } from './home/home.component';
+import { StudentsComponent } from './students/students.component';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'about', component: AboutComponent },
   { path: 'test', component: TestComponent },
-  { path: 'staff', component: StaffComponent }
+  { path: 'staff', component: StaffComponent },
+  { path: 'students', component: StudentsComponent }
 ];
 
 @NgModule({
@@ -24,10 +27,12 @@ const appRoutes: Routes = [
     ShowComponent,
     TestComponent,
     StaffComponent,
-    HomeComponent
+    HomeComponent,
+    StudentsComponent
   ],
   imports: [
     BrowserModule,
+    NgbModule,
     RouterModule.forRoot(appRoutes)
   ],
   providers: [],
