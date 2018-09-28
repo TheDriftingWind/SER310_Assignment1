@@ -12,8 +12,28 @@ export class TestComponent {
   val_y : number = 20;
   disable_btn : boolean = true;
 
+  the_text : string = '';
+
+  the_color : string = '';
+
+  newFruit : string = '';
+  list = ["apples", "oranges", "bananas", "pear"];
+
   a_function() {
     return this.a_number * 100;
+  }
+
+  addNewFruit(){
+    this.list.push(this.newFruit);
+    this.newFruit = '';
+  }
+
+  getColor(color){
+    if(color != 'red' && color != 'blue' && color != 'yellow'){
+      return 'gray'
+    } else {
+      return color
+    }
   }
 
   constructor(){

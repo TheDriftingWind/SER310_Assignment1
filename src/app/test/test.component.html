@@ -4,16 +4,39 @@
   <hr>
 
   <p>this button will be enabled in 5 seconds after loading the page</p>
-  <button class="btn btn-primary" [disabled]="disable_btn">Button</button>
-
+  <button class="btn btn-danger" [disabled]="disable_btn">Button</button>
+  <!-- [ngClass]="{'btn btn-success': disabled_btn == false}" || doesn't work with bootstrap classes-->
   <hr>
 
   <h3>
+    <!-- Display a number -->
     {{ a_number }}
+    <!-- Display a calculation -->
     {{ val_x + val_y }}
+    <!-- Display the return of a function -->
     {{ a_function() }}
   </h3>
 
   <hr>
+  <!-- Need FormsModule in order to use ngModel -->
+  <input type="text" class="form-control" [(ngModel)]="the_text">
+  <!-- This paragraph will be added to the DOM if the_text is equal to 'apple' -->
+  <p *ngIf="the_text == 'apple'; else notApple">The text is TOTALLY NOT apple</p>
+  <!-- else if text != 'apple' display the paragraph below -->
+  <ng-template #notApple>
+    <p *ngIf="the_text != 'apple'">The text is "{{the_text}}"</p>
+  </ng-template>
 
+  <hr>
+  <!-- Type red, blue, or yellow else you get gray -->
+  <input type="text" class="form-control" [(ngModel)]="the_color">
+  <p [ngStyle]="{backgroundColor: getColor(the_color)}">The color is {{the_color}}</p>
+
+  <hr>
+  <!-- Display a list and allow the ability to push new fruits to the list -->
+  <input type="text" class="form-control" [(ngModel)]="newFruit">
+  <button class="btn btn-success" (click)="addNewFruit()">Add</button>
+  <ul *ngFor="let item of list">
+  <li>{{item}}</li>
+  </ul>
 <div>
