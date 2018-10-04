@@ -36,6 +36,22 @@ footer{
   margin-top: 125px;
 }
 
+@media only screen and (max-device-width : 480px) and (min-device-width : 320px){
+  .mobileOnly{
+    display: inline !important;
+  }
+  .navbar-header h1 {
+    font-size: 30px;
+    left: 0px;
+  }
+}
+
+@media only screen and (max-device-width : 1800px) and (min-device-width : 480px){
+  .mobileOnly{
+    display: none !important;
+  }
+}
+
 .fa-1x {
     font-size: 1.5rem;
 }

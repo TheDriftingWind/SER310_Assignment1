@@ -18,17 +18,19 @@
     <li><a href="/staff">Staff</a></li>
     <li><a href="/students">Students</a></li>
     <li>
-      <p style="z-index: 9999;">
-      <button type="button" class="btn btn-outline-primary" (click)="isCollapsed = !isCollapsed"
-              [attr.aria-expanded]="!isCollapsed" aria-controls="hamburgerMenu">
-        <span class="glyphicon glyphicon-menu-hamburger"></span>
-      </button>
-      </p>
+      <div class="mobileOnly">
+        <p style="z-index: 9999;">
+        <button type="button" class="btn btn-outline-primary" (click)="isCollapsed = !isCollapsed"
+                [attr.aria-expanded]="!isCollapsed" aria-controls="hamburgerMenu">
+          <span class="glyphicon glyphicon-menu-hamburger"></span>
+        </button>
+        </p>
+      </div>
     </li>
   </ul>
 </div>
 </nav>
-<div id="hamburgerMenu" [ngbCollapse]="isCollapsed" style="margin-top: 125px">
+<div id="hamburgerMenu" [ngbCollapse]="isCollapsed" style="margin-top: 125px;">
   <div class="card">
     <div class="card-body">
       <ul class="list-inline">
