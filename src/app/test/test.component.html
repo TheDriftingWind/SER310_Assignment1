@@ -36,7 +36,8 @@
   <!-- Display a list and allow the ability to push new fruits to the list -->
   <input type="text" class="form-control" [(ngModel)]="newFruit">
   <button class="btn btn-success" (click)="addNewFruit()">Add</button>
-  <ul *ngFor="let item of list">
-  <li>{{item}}</li>
+  <ul *ngFor="let item of list; let i = index">
+    <!-- item #'s divisable by 0 will appear blue while all others appear gray -->
+  <li [ngStyle]="{'color' : (i%3 == 0) ? 'blue' : 'gray'}">Item {{i}}:{{item}}</li> 
   </ul>
 <div>
