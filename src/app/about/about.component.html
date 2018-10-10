@@ -1,52 +1,55 @@
 <div class="container">
   <div class="row">
-    <div class="info-blurb">
-      <h3>{{ pageTitle }}</h3>
-      <p>
-        With 80% of the population having quirks, U.A. High School is an academy where students can learn
-        and train to become the next generation of heros that will use their quirks for the greater good.
-        U.A. is the #1 top ranked high school for heroics and is considered to be the top Hero Academy in Japan.
-        At U.A. High School, students will learn to be well rounded and capable heros that will be qualified to
-        use the powers in public spaces to defend the public from villans and various dangers.
-      </p>
-      <p>
-        U.A. has exceptional security measures to ensure that it's students are safe from unwelcome visitors and villians.
-        U.A. is also equipped with several facilities that will aid in developing each student's individual and unique quirk.
-      </p>
+    <div class="col-md-2" style="background-color: white; position: fixed; left: 0px; height: 67%; z-index: 9997;">
+      <ul style="list-style: none; text-align: center;">
+        <li><a href="" class="btn">History</a></li>
+        <hr>
+        <li><a href="" class="btn">Location and Hours</a></li>
+        <hr>
+        <li><a href="" class="btn">Classes</a></li>
+        <hr>
+        <li><a href="" class="btn">Housing</a></li>
+      </ul>
     </div>
-  </div>
-  <div class="row">
-    <div class="info-blurb">
-      <h3>Meet All Might</h3>
-      <p>
-        By attending U.A. High School, you may have the chance to meet or even have a class with the No. 1 Hero, All Might
-        himself.
-      </p>
-      <div style="align:center;margin:auto;width: 50%">
-        <img src="assets/images/allmight.jpg">
+    <div class="col-md-10" style="margin-left: 16.7%">
+      <h1 style="text-align: center;"><span style="background-color: white; border-radius:10px; padding:5px 10px 5px 10px; border: 2px solid black;">About Us</span></h1>
+      <div class="row">
+        <div class="col-md-12 mainDisplay">
+          <!-- <p>{{currentCard}}</p>  For Debugging -->
+          <div class="displayer">
+            <div id="card1" [hidden]="!(currentCard == 1)">
+              <img class="cardimg" src="../assets/images/uah_logo.jpg" alt="UA High Logo" height="300">
+              <h3>What is U.A.?</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean rhoncus finibus magna. Aliquam lacinia feugiat velit. Sed ut sagittis nunc, in viverra arcu. Integer vehicula quam nec tellus semper, nec sollicitudin neque tempus. Proin eu pretium turpis. Nunc fermentum facilisis magna. Proin porttitor nisi lorem, vitae malesuada nibh interdum id. Integer placerat ex id commodo dapibus. Phasellus congue erat at malesuada suscipit. Nulla et dignissim magna, at dictum risus. Nullam molestie condimentum urna, sed ullamcorper mauris faucibus sit amet. Donec eget hendrerit sem, non consectetur libero. Quisque a vehicula lorem, in pretium dui. Vestibulum pulvinar tortor ac urna ultricies, vitae condimentum felis consequat. Integer libero elit, posuere sit amet ultricies eu, accumsan volutpat turpis. </p>
+            </div>
+            <div id="card2" [hidden]="!(currentCard == 2)">
+              <img class="cardimg" src="../assets/images/portraits/Nezu_Portrait.png" alt="Principle Nezu" height="300">
+              <h3>Our Principle</h3>
+              <p>Cras sit amet tempus ex. Curabitur pretium pharetra tempus. Nullam et turpis luctus, condimentum ex ut, feugiat dui. Quisque congue est quis ligula maximus, in pellentesque arcu volutpat. Cras nec leo faucibus, viverra neque nec, vestibulum tellus. Etiam malesuada efficitur nibh vel sagittis. In fermentum urna at ex scelerisque placerat. Suspendisse tincidunt lacinia arcu a sodales. Aenean dapibus augue sit amet orci vulputate, et condimentum elit congue. Vestibulum quis bibendum arcu, a pellentesque ipsum. Suspendisse eu scelerisque orci. Nam ac vehicula sapien. </p>
+            </div>
+            <div id="card3" [hidden]="!(currentCard == 3)">
+              <img class="cardimg" src="../assets/images/allmight.jpg" alt="All might" height="300">
+              <h3>Our Goal</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean rhoncus finibus magna. Aliquam lacinia feugiat velit. Sed ut sagittis nunc, in viverra arcu. Integer vehicula quam nec tellus semper, nec sollicitudin neque tempus. Proin eu pretium turpis. Nunc fermentum facilisis magna. Proin porttitor nisi lorem, vitae malesuada nibh interdum id. Integer placerat ex id commodo dapibus. Phasellus congue erat at malesuada suscipit. Nulla et dignissim magna, at dictum risus. Nullam molestie condimentum urna, sed ullamcorper mauris faucibus sit amet. Donec eget hendrerit sem, non consectetur libero. Quisque a vehicula lorem, in pretium dui. Vestibulum pulvinar tortor ac urna ultricies, vitae condimentum felis consequat. Integer libero elit, posuere sit amet ultricies eu, accumsan volutpat turpis. </p>
+            </div>
+            <div id="card4" [hidden]="!(currentCard == 4)">
+              <img class="cardimg" src="../assets/images/uastudents.png" alt="Students of U.A." height="300">
+              <h3>Why Choose U.A.</h3>
+              <p>Cras sit amet tempus ex. Curabitur pretium pharetra tempus. Nullam et turpis luctus, condimentum ex ut, feugiat dui. Quisque congue est quis ligula maximus, in pellentesque arcu volutpat. Cras nec leo faucibus, viverra neque nec, vestibulum tellus. Etiam malesuada efficitur nibh vel sagittis. In fermentum urna at ex scelerisque placerat. Suspendisse tincidunt lacinia arcu a sodales. Aenean dapibus augue sit amet orci vulputate, et condimentum elit congue. Vestibulum quis bibendum arcu, a pellentesque ipsum. Suspendisse eu scelerisque orci. Nam ac vehicula sapien. </p>
+            </div>
+          </div>
+          <div class="controls">
+            <ul class="list-inline" style="text-align: center;">
+              <li><button class="btn btn-info" (click)="prevPage()">Prev<br><span class="glyphicon glyphicon-chevron-left"></span></button></li>
+              <li><button (click)="currentCard = 1;" [ngClass]="{'btn': true, 'btn-default': !(currentCard == 1), 'btn-warning': currentCard == 1}">What is U.A.?</button></li>
+              <li><button (click)="currentCard = 2;" [ngClass]="{'btn': true, 'btn-default': !(currentCard == 2), 'btn-warning': currentCard == 2}">Our Principle</button></li>
+              <li><button (click)="currentCard = 3;" [ngClass]="{'btn': true, 'btn-default': !(currentCard == 3), 'btn-warning': currentCard == 3}">Our Goal</button></li>
+              <li><button (click)="currentCard = 4;" [ngClass]="{'btn': true, 'btn-default': !(currentCard == 4), 'btn-warning': currentCard == 4}">Why Choose U.A.</button></li>
+              <li><button class="btn btn-info" (click)="nextPage()">Next<br><span class="glyphicon glyphicon-chevron-right"></span></button></li>
+            </ul>
+          </div>
+        </div>
       </div>
-      <p>
-        All Might is the barer of the title of the world's <strong>Symbol of Peace</strong>. He has earned
-        this title through his strength in deterring crime. His very presence in society discourages villians.
-        All Might teaches Foundational Hero Studies at U.A. High School.
-      </p>
     </div>
   </div>
-  <div class="row">
-    <div class="info-blurb">
-      <h3>Meet Our Students</h3>
-      <p>
-        Meet Izuku. He is a student who attend U.A. High School in Class A. He was thought by many to be born quirkless.
-        However, he drew the attention of the school when he displayed incredible strength by annihalating a training
-        bot at the entrance exam for U.A. High School; saving fellow student Uraraka in the process. He displays a true
-        heart of a hero.
-
-        Follow him as he begins his journey through U.A. High School to become a professional hero like his idol, All Might.
-      </p>
-      <div style="align:center;margin:auto;width: 75%">
-        <img src="assets/images/Deku.png">
-      </div>
-    </div>
-  </div>
-</div>
-<app-show></app-show>
+<!-- <app-show></app-show> Relocate to Watch Show page when it's made -->

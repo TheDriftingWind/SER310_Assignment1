@@ -3,3 +3,19 @@
   margin-top: 10px;
   font-family: 'Lato', sans-serif;
 }
+
+.cardimg {
+  width: 100%
+}
+
+.mainDisplay {
+  border-radius: 50px;
+  border-width: medium;
+  padding: 70px 50px 70px 50px;
+  background-color: white; margin-left: 10px; border: 2px solid black;
+}
+
+li a {
+  font-size: 16px;
+  font-weight: bold;
+}
