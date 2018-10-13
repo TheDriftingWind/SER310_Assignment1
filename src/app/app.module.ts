@@ -12,6 +12,7 @@ import { StaffComponent } from './staff/staff.component';
 import { HomeComponent } from './home/home.component';
 import { StudentsComponent } from './students/students.component';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { Test2Component } from './test2/test2.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
@@ -29,7 +30,8 @@ const appRoutes: Routes = [
     TestComponent,
     StaffComponent,
     HomeComponent,
-    StudentsComponent
+    StudentsComponent,
+    Test2Component
   ],
   imports: [
     BrowserModule,

@@ -19,6 +19,9 @@ export class TestComponent {
   newFruit : string = '';
   list = ["apples", "oranges", "bananas", "pear"];
 
+  serverName : string = '';
+  servers = [{name: 'string'}];
+
   a_function() {
     return this.a_number * 100;
   }
@@ -26,6 +29,11 @@ export class TestComponent {
   addNewFruit(){
     this.list.push(this.newFruit);
     this.newFruit = '';
+  }
+
+  addServer(){
+    this.servers.push({name: this.serverName});
+    this.serverName = '';
   }
 
   getColor(color){

@@ -38,6 +38,13 @@
   <button class="btn btn-success" (click)="addNewFruit()">Add</button>
   <ul *ngFor="let item of list; let i = index">
     <!-- item #'s divisable by 0 will appear blue while all others appear gray -->
-  <li [ngStyle]="{'color' : (i%3 == 0) ? 'blue' : 'gray'}">Item {{i}}:{{item}}</li> 
+  <li [ngStyle]="{'color' : (i%3 == 0) ? 'blue' : 'gray'}">Item {{i}}:{{item}}</li>
   </ul>
+
+  <hr>
+  <input type="text" class="form-control" [(ngModel)]="serverName">
+  <button class="btn btn-success" (click)="addServer()">Add</button>
+  <app-test2 *ngFor="let s of servers" [element]="s"></app-test2>
+
+
 <div>
