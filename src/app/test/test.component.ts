@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-test',
@@ -19,8 +19,8 @@ export class TestComponent {
   newFruit : string = '';
   list = ["apples", "oranges", "bananas", "pear"];
 
-  serverName : string = '';
-  servers = [{name: 'string'}];
+  itemName : string = '';
+  items = [{name: 'string'}];
 
   a_function() {
     return this.a_number * 100;
@@ -31,9 +31,16 @@ export class TestComponent {
     this.newFruit = '';
   }
 
-  addServer(){
-    this.servers.push({name: this.serverName});
-    this.serverName = '';
+  addItem(){
+    this.items.push({name: this.itemName});
+    this.itemName = '';
+  }
+
+  onItemAdded(data: {itemName: string}){
+    console.log(data);
+    this.items.push({
+      name: data.itemName
+    });
   }
 
   getColor(color){

@@ -42,9 +42,9 @@
   </ul>
 
   <hr>
-  <input type="text" class="form-control" [(ngModel)]="serverName">
-  <button class="btn btn-success" (click)="addServer()">Add</button>
-  <app-test2 *ngFor="let s of servers" [element]="s"></app-test2>
+  <input type="text" class="form-control" [(ngModel)]="itemName">
+  <button class="btn btn-success" (click)="addItem()">Add</button>
+  <app-test2 *ngFor="let i of items" [someAlias]="i" (itemAdded)="onItemAdded($event)"></app-test2>
 
 
 <div>
