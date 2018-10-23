@@ -13,10 +13,10 @@
   </div>
   <div class="container">
   <ul class="list-inline">
-    <li><a href="">Home</a></li>
-    <li><a href="/about">About</a></li>
+    <li [ngClass]="{'selected': (currentUrl == '/')}"><a href="">Home</a></li>
+    <li [ngClass]="{'selected': (currentUrl == '/about')}"><a href="/about">About</a></li>
     <li><a href="">News</a></li>
-    <li><a href="/events">Events</a></li>
+    <li [ngClass]="{'selected': (currentUrl == '/events')}"><a href="/events">Events</a></li>
     <li><a href="">Meet Us</a></li>
     <li><a href="">Store</a></li>
     <li><a href="https://www.crunchyroll.com/my-hero-academia">Watch Show</a></li>
@@ -37,10 +37,10 @@
   <div class="card">
     <div class="card-body">
       <ul class="list-inline">
-        <li><a href="">Home</a></li>
-        <li><a href="/about">About</a></li>
+        <li [ngClass]="{'selected': (currentUrl == '/')}"><a href="">Home{{currentUrl == '/'}}</a></li>
+        <li [ngClass]="{'selected': (currentUrl == '/about')}"><a href="/about">About</a></li>
         <li><a href="">News</a></li>
-        <li><a href="/events">Events</a></li>
+        <li [ngClass]="{'selected': (currentUrl == '/events')}"><a href="/events">Events</a></li>
         <li><a href="">Meet Us</a></li>
         <li><a href="">Store</a></li>
         <li><a href="https://www.crunchyroll.com/my-hero-academia">Watch Show</a></li>

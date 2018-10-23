@@ -9,6 +9,10 @@ nav {
   height: 120px;
 }
 
+.selected{
+  background: red;
+}
+
 .navbar-header img {
   float: left;
 }
