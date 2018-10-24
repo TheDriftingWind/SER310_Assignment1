@@ -18,6 +18,9 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CalendarModule, DateAdapter } from 'angular-calendar';
 import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
+import { MeetusComponent } from './meetus/meetus.component';
+import { NewsComponent } from './news/news.component';
+import { StoreComponent } from './store/store.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
@@ -25,7 +28,10 @@ const appRoutes: Routes = [
   { path: 'test', component: TestComponent },
   { path: 'staff', component: StaffComponent },
   { path: 'students', component: StudentsComponent },
-  { path: 'events', component: EventsComponent}
+  { path: 'events', component: EventsComponent },
+  { path: 'meetus', component: MeetusComponent },
+  { path: 'news', component: NewsComponent },
+  { path: 'store', component: StoreComponent }
 ];
 
 @NgModule({
@@ -38,7 +44,10 @@ const appRoutes: Routes = [
     HomeComponent,
     StudentsComponent,
     Test2Component,
-    EventsComponent
+    EventsComponent,
+    MeetusComponent,
+    NewsComponent,
+    StoreComponent
   ],
   imports: [
     BrowserModule,
