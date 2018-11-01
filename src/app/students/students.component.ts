@@ -9,6 +9,8 @@ import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
   providers: [NgbCarouselConfig]  // add NgbCarouselConfig to the component providers
 })
 export class StudentsComponent {
+  myThumbnail = '../assets/images/Deku.png'
+  Bakugo = '../assets/images/students/bakugo_fighting.jpg'
   images = ["../assets/images/students/deku_fights_muscular.gif", "../assets/images/students/bakugo_escape.gif", "../assets/images/students/todoroki_fights_stain.gif", "../assets/images/students/iida_kick.gif"];
 
   constructor(config: NgbCarouselConfig) {
@@ -18,4 +20,6 @@ export class StudentsComponent {
     config.keyboard = false;
     config.pauseOnHover = false;
   }
+
+
 }

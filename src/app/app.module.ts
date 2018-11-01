@@ -21,6 +21,8 @@ import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
 import { MeetusComponent } from './meetus/meetus.component';
 import { NewsComponent } from './news/news.component';
 import { StoreComponent } from './store/store.component';
+// angular 6 image zoom
+import { NgxImageZoomModule } from 'ngx-image-zoom';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
@@ -53,6 +55,7 @@ const appRoutes: Routes = [
     BrowserModule,
     NgbModule,
     FormsModule,
+    NgxImageZoomModule.forRoot(),
     BrowserAnimationsModule,
     CalendarModule.forRoot({
       provide: DateAdapter,

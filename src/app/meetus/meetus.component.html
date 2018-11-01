@@ -1,8 +1,69 @@
-<h1 style="text-align: center; background: white;"> Meet Us </h1>
 <div class="container" style="text-align: center; background: white; border-radius: 10px">
+  <h1 style="text-align: center"> Meet Us </h1>
   <br>
+  <p><span class="glyphicon glyphicon-search"></span> Mouse over images to zoom</p>
+  <ngx-image-zoom
+    [thumbImage]=teachersImg
+    [enableLens]=true
+    [circularLens]=true
+    [lensWidth]=200
+    [lensHeight]=200
+    [magnification]=2
+  ></ngx-image-zoom>
   <h3><a class="btn btn-info btn-lg" href="/staff">Meet our staff</a></h3>
   <br>
+  <p><span class="glyphicon glyphicon-search"></span> Mouse over images to zoom</p>
+  <ngx-image-zoom
+    [thumbImage]=studentsImg
+    [enableLens]=true
+    [circularLens]=true
+    [lensWidth]=200
+    [lensHeight]=200
+    [magnification]=2
+  ></ngx-image-zoom>
   <h3><a class="btn btn-info btn-lg" href="/students">Meet our students</a></h3>
+  <br>
+</div>
+<br>
+<div class="container" style="background: white; border-radius: 10px">
+  <h3>Contact us</h3>
+  <form>
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input type="text" class="form-control" id="name">
+    </div>
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input type="email" class="form-control" id="email">
+    </div>
+    <label style="margin-right: 10px;">Topic:</label>
+    <div class="form-check form-check-inline">
+     <label class="form-check-label">admission</label>
+     <input type="checkbox" class="form-check-input">
+   </div>
+   <div class="form-check form-check-inline">
+     <label class="form-check-label">curriculum</label>
+     <input type="checkbox" class="form-check-input">
+   </div>
+   <div class="form-check form-check-inline">
+     <label class="form-check-label">others</label>
+     <input type="checkbox" class="form-check-input">
+   </div>
+    <div class="form-group">
+      <label for="dropdown">Faculty Recipient</label>
+      <select class="form-control" id="dropdown">
+        <option>Nezu</option>
+        <option>Shoto Aizawa</option>
+        <option>Toshinori Yagi</option>
+        <option>Hizashi Yamada</option>
+        <option>Thirteen</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="message">Message</label>
+      <textarea class="form-control" id="message" rows="3"></textarea>
+    </div>
+    <input type="submit" value="Send" class="btn btn-primary">
+  </form>
   <br>
 </div>

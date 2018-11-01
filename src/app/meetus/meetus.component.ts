@@ -6,7 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./meetus.component.css']
 })
 export class MeetusComponent implements OnInit {
+  teachersImg = '../assets/images/uateachers.png';
 
+  studentsImg = '../assets/images/uastudents_small.png';
+  studentsFull = '../assets/images/uastudents.png';
   constructor() { }
 
   ngOnInit() {
