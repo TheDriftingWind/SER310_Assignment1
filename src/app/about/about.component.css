@@ -10,9 +10,8 @@
 
 .mainDisplay {
   border-radius: 50px;
-  border-width: medium;
   padding: 70px 50px 70px 50px;
-  background-color: white; margin-left: 10px; border: 2px solid black;
+  background-color: white; margin-left: 10px;
 }
 
 li a {

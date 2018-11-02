@@ -13,12 +13,12 @@
   </div>
   <div class="container">
   <ul class="list-inline">
-    <li class="nav-button notMobile" [ngClass]="{'selected': (currentUrl == '/')}"><span class="glyphicon glyphicon-home"></span><a href="">Home</a></li>
-    <li class="nav-button notMobile" [ngClass]="{'selected': (currentUrl == '/about')}"><span class="glyphicon glyphicon-info-sign"></span><a href="/about">About</a></li>
-    <li class="nav-button notMobile" [ngClass]="{'selected': (currentUrl == '/news')}"><span class="glyphicon glyphicon-list-alt"></span><a href="/news">News</a></li>
-    <li class="nav-button notMobile" [ngClass]="{'selected': (currentUrl == '/events')}"><span class="glyphicon glyphicon-calendar"></span><a href="/events">Events</a></li>
-    <li class="nav-button notMobile" [ngClass]="{'selected': (currentUrl == '/meetus')}"><span class="glyphicon glyphicon-user"></span><a href="/meetus">Meet Us</a></li>
-    <li class="nav-button notMobile" [ngClass]="{'selected': (currentUrl == '/store')}"><span class="glyphicon glyphicon-shopping-cart"></span><a href="/store">Store</a></li>
+    <li class="nav-button notMobile" [ngClass]="{'selected': (currentUrl == '/')}"><span class="glyphicon glyphicon-home"></span><a routerLink="/">Home</a></li>
+    <li class="nav-button notMobile" [ngClass]="{'selected': (currentUrl == '/about')}"><span class="glyphicon glyphicon-info-sign"></span><a routerLink="/about">About</a></li>
+    <li class="nav-button notMobile" [ngClass]="{'selected': (currentUrl == '/news')}"><span class="glyphicon glyphicon-list-alt"></span><a routerLink="/news">News</a></li>
+    <li class="nav-button notMobile" [ngClass]="{'selected': (currentUrl == '/events')}"><span class="glyphicon glyphicon-calendar"></span><a routerLink="/events">Events</a></li>
+    <li class="nav-button notMobile" [ngClass]="{'selected': (currentUrl == '/meetus')}"><span class="glyphicon glyphicon-user"></span><a routerLink="/meetus">Meet Us</a></li>
+    <li class="nav-button notMobile" [ngClass]="{'selected': (currentUrl == '/store')}"><span class="glyphicon glyphicon-shopping-cart"></span><a routerLink="/store">Store</a></li>
     <li class="nav-button notMobile"><span class="glyphicon glyphicon-film"></span><a href="https://www.crunchyroll.com/my-hero-academia">Watch Show</a></li>
     <li>
       <div class="mobileOnly">
@@ -37,12 +37,12 @@
   <div class="card">
     <div class="card-body">
       <ul class="list-inline">
-        <li class="nav-button" [ngClass]="{'selected': (currentUrl == '/')}"><a href="">Home</a></li>
-        <li class="nav-button" [ngClass]="{'selected': (currentUrl == '/about')}"><a href="/about">About</a></li>
-        <li class="nav-button"><a href="">News</a></li>
-        <li class="nav-button" [ngClass]="{'selected': (currentUrl == '/events')}"><a href="/events">Events</a></li>
-        <li class="nav-button"><a href="">Meet Us</a></li>
-        <li class="nav-button"><a href="">Store</a></li>
+        <li class="nav-button" [ngClass]="{'selected': (currentUrl == '/')}"><a routerLink="/">Home</a></li>
+        <li class="nav-button" [ngClass]="{'selected': (currentUrl == '/about')}"><a routerLink="/about">About</a></li>
+        <li class="nav-button"><a routerLink="">News</a></li>
+        <li class="nav-button" [ngClass]="{'selected': (currentUrl == '/events')}"><a routerLink="/events">Events</a></li>
+        <li class="nav-button"><a routerLink="">Meet Us</a></li>
+        <li class="nav-button"><a routerLink="">Store</a></li>
         <li class="nav-button"><a href="https://www.crunchyroll.com/my-hero-academia">Watch Show</a></li>
       </ul>
     </div>
@@ -83,13 +83,13 @@
 
             <ul class="list-unstyled">
               <li>
-                <a href="/about">About</a>
+                <a routerLink="/about">About</a>
               </li>
               <li>
-                <a href="/staff">Staff</a>
+                <a routerLink="/staff">Staff</a>
               </li>
               <li>
-                <a href="/students">Students</a>
+                <a routerLink="/students">Students</a>
               </li>
             </ul>
 

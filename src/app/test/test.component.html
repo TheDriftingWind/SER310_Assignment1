@@ -46,5 +46,12 @@
   <button class="btn btn-success" (click)="addItem()">Add</button>
   <app-test2 *ngFor="let i of items" [someAlias]="i" (itemAdded)="onItemAdded($event)"></app-test2>
 
+  <hr>
+  <p>Local References in Templates</p>
+  <input type="text" class="form-control" #theLocalInputRef>
+  <button class="btn btn-primary" (click)="addLocalRefValue(theLocalInputRef,theLocalListRef)">Add</button>
+  <ul #theLocalListRef [innerHtml]="localRefList">
+    <!-- list items will be added here -->
+  </ul>
 
 <div>

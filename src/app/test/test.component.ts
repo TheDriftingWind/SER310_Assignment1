@@ -22,6 +22,8 @@ export class TestComponent {
   itemName : string = '';
   items = [{name: 'string'}];
 
+  localRefList : string ='';
+
   a_function() {
     return this.a_number * 100;
   }
@@ -49,6 +51,12 @@ export class TestComponent {
     } else {
       return color
     }
+  }
+
+  addLocalRefValue(inputRef){
+    // console.log(inputRef);
+    // append the value of the inputRef element as a list iem. this will be displayed by the <ul> element's [innerHtml]
+    this.localRefList +=  "<li>" + inputRef.value + "</li>"
   }
 
   constructor(){
