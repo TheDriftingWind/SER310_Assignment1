@@ -21,6 +21,7 @@ import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
 import { MeetusComponent } from './meetus/meetus.component';
 import { NewsComponent } from './news/news.component';
 import { StoreComponent } from './store/store.component';
+import { BasicHighlightDirective } from './basic-highlight/basic-highlight.directive';  
 // angular 6 image zoom
 import { NgxImageZoomModule } from 'ngx-image-zoom';
 
@@ -49,7 +50,8 @@ const appRoutes: Routes = [
     EventsComponent,
     MeetusComponent,
     NewsComponent,
-    StoreComponent
+    StoreComponent,
+    BasicHighlightDirective
   ],
   imports: [
     BrowserModule,
