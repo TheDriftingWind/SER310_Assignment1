@@ -6,6 +6,29 @@
     </div>
   </div>
 
+  <carousel [noWrap]="true" [interval]="8000">
+    <slide>
+      <img src="../assets/images/uastudents.png" alt="first slide" style="display: block; width: 100%;">
+      <div class="carousel-caption d-none d-md-block" >
+        <h3 style="background-color: transparent;">UA Students</h3>
+        <p style="background-color: transparent;">train to be a top hero</p>
+      </div>
+    </slide>
+    <slide>
+      <img src="../assets/images/uateachers.png" alt="second slide" style="display: block; width: 100%;">
+      <div class="carousel-caption d-none d-md-block">
+        <h3 style="background-color: transparent;">UA Teachers</h3>
+        <p style="background-color: transparent;">experienced, high-ranking, veteran heroes</p>
+      </div>
+    </slide>
+    <slide>
+      <img src="../assets/images/uaHighBuilding2.jpg" alt="third slide" style="display: block; width: 100%;">
+      <div class="carousel-caption d-none d-md-block" style="height: 100%; padding-top: 25%;">
+        <button class="btn btn-primary btn-lg"><h1>Apply Today!</h1></button>
+      </div>
+    </slide>
+  </carousel>
+
 <div class="container">
   <div class="row">
     <div class="col-md-4">
@@ -27,4 +50,11 @@
       </div>
     </div>
   </div>
+</div>
+
+<div class="container whiteCard" style="margin: auto; margin-top: 10px;">
+<button class="btn btn-link" (click)="toggleHistory()"><h3>School History</h3></button>
+  <p [hidden]="!showHistory">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ut urna purus. Vestibulum id odio sit amet nisi suscipit ullamcorper eu at lectus. Fusce sed mollis mi. Nam eget viverra est. Nam fermentum, mi a semper venenatis, metus ante imperdiet nulla, a blandit ipsum risus non eros. Fusce nec mauris eu turpis congue elementum. Ut tempus mi quis nibh hendrerit pulvinar. Ut facilisis suscipit risus, bibendum dapibus orci posuere et. Suspendisse scelerisque tellus vel odio porttitor venenatis. Proin nulla tortor, placerat non nisl in, eleifend bibendum lacus.
+  </p>
 </div>

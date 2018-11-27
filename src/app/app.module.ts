@@ -25,6 +25,7 @@ import { BasicHighlightDirective } from './basic-highlight/basic-highlight.direc
 import { BetterHighlightDirective } from './better-highlight/better-highlight.directive';
 // angular 6 image zoom
 import { NgxImageZoomModule } from 'ngx-image-zoom';
+import { CarouselModule } from 'ngx-bootstrap/carousel'
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
@@ -59,6 +60,7 @@ const appRoutes: Routes = [
     BrowserModule,
     NgbModule,
     FormsModule,
+    CarouselModule.forRoot(),
     NgxImageZoomModule.forRoot(),
     BrowserAnimationsModule,
     CalendarModule.forRoot({
