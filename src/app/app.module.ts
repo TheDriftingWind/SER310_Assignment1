@@ -25,12 +25,15 @@ import { BasicHighlightDirective } from './basic-highlight/basic-highlight.direc
 import { BetterHighlightDirective } from './better-highlight/better-highlight.directive';
 // angular 6 image zoom
 import { NgxImageZoomModule } from 'ngx-image-zoom';
-import { CarouselModule } from 'ngx-bootstrap/carousel'
+import { CarouselModule } from 'ngx-bootstrap/carousel';
+import { Test3Component } from './test3/test3.component'
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'about', component: AboutComponent },
   { path: 'test', component: TestComponent },
+  { path: 'test/test3', component: Test3Component},
+  { path: 'test/test3/:value', component: Test3Component},
   { path: 'staff', component: StaffComponent },
   { path: 'students', component: StudentsComponent },
   { path: 'events', component: EventsComponent },
@@ -54,7 +57,8 @@ const appRoutes: Routes = [
     NewsComponent,
     StoreComponent,
     BasicHighlightDirective,
-    BetterHighlightDirective
+    BetterHighlightDirective,
+    Test3Component
   ],
   imports: [
     BrowserModule,

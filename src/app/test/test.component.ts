@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Output } from '@angular/core';
+import { Router, ActivatedRoute } from '@angular/router'
 
 @Component({
   selector: 'app-test',
@@ -11,6 +12,7 @@ export class TestComponent {
   val_x : number = 5;
   val_y : number = 20;
   disable_btn : boolean = true;
+  test3_value : string = '';
 
   the_text : string = '';
 
@@ -59,10 +61,18 @@ export class TestComponent {
     this.localRefList +=  "<li>" + inputRef.value + "</li>"
   }
 
-  constructor(){
+  constructor(private route: ActivatedRoute, private router: Router){
     setTimeout(() => {
       this.disable_btn = false;
     }, 5000)
+  }
+
+  onGoToTest3(value){
+    if(value){
+      this.router.navigate(['test3/'+value], {relativeTo: this.route})
+    } else{
+      this.router.navigate(['test3'], {relativeTo: this.route})
+    }
   }
 
 }

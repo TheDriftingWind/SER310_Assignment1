@@ -56,5 +56,16 @@
   <hr>
   <h3 appBasicHighlight>Testing Basic Highlight Directive</h3>
   <h3 appBetterHighlight>Testing Better Highlight Directive</h3>
+  <hr>
+  <p>Relative RouterLink</p>
+  <a routerLink="test3">Go to Test 3</a>
+  <br>
+  <p>Absolute RouterLink</p>
+  <a routerLink="/test/test3">Go to Test 3</a>
+  <br>
+  <p>Programatic routing</p>
+  <input type="text" [(ngModel)]="test3_value" placeholder="Enter value and click Go">
+  <button (click)="onGoToTest3(test3_value)">Go to Test 3</button>
+  <br>
 
 <div>
